@@ -1,0 +1,9 @@
+type PruwitterEntry {
+  username: String!
+  pru: String!
+}
+# A query named 'entries' which returns an array of PruwitterEntry objects
+# Implicit arguments: _size (count) and _cursor (location within the Index)
+type Query {
+  entries: [PruwitterEntry]
+}
