@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { createPruEntry, usePruEntries } from "../graphql/api";
 import Head from "next/head";
+import { TiSocialGithub } from "react-icons/ti";
+import { createPruEntry, usePruEntries } from "../graphql/api";
 
 function getEntries(data) {
   return data ? data.entries.data.reverse() : [];
@@ -56,7 +57,8 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
         <title>Pruwitter</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
 
       <div className="flex flex-col items-center flex-1 w-full h-full">
@@ -148,6 +150,25 @@ export default function Home() {
           </div>
         </main>
       </div>
+      <footer className="flex flex-col items-center justify-center py-10">
+        <div className="flex flex-row">
+          <p className="text-gray-800">
+            &copy; Copyright &nbsp;
+            <a
+              href="https://github.com/Muurilo"
+              className="text-blue-700"
+              target="_blank"
+            >
+              Murilo Cunha
+            </a>
+          </p>
+        </div>
+        <div className="flex flex-row">
+          <a href="https://github.com/Muurilo/Pruwitter" target="_blank">
+            <TiSocialGithub className="w-14 h-14" color="#343A40" />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }
