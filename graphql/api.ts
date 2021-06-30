@@ -74,8 +74,8 @@ export const usePruEntries = () => {
 |--------------------------------------------------
 */
 export const createPruEntry = async (username, pru) => {
-  const query = `mutation CreatePruEntry($username: String!, $pru: String!) {
-    createPruEntry(data: {
+  const query = `mutation CreatePruwitterEntry($username: String!, $pru: String!) {
+    createPruwitterEntry(data: {
       username: $username,
       pru: $pru
     }) {
