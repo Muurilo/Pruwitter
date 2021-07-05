@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Head from "next/head";
 import { TiSocialGithub } from "react-icons/ti";
 import { createPruEntry, usePruEntries } from "../graphql/api";
 
@@ -55,12 +54,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>Pruwitter</title>
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-      </Head>
-
       <div className="flex flex-col items-center flex-1 w-full h-full">
         <header className="my-10">
           <h1 className="px-5 text-4xl">Pruwitter - Twitter for pigeons 🍞</h1>
