@@ -34,7 +34,7 @@ export default function Home() {
         entries.unshift(data.data.createPruwitterEntry);
         setUsername("");
         setPru("");
-        setEntries(entries);
+        setEntries(entries.reverse());
         setSubmitting(false);
       })
       .catch((error) => {
@@ -103,7 +103,7 @@ export default function Home() {
                       cy="12"
                       r="10"
                       stroke="currentColor"
-                      stroke-width="4"
+                      strokeWidth="4"
                     ></circle>
                     <path
                       className="opacity-75"
@@ -144,6 +144,19 @@ export default function Home() {
         </main>
       </div>
       <footer className="flex flex-col items-center justify-center py-10">
+        <a
+          href="https://simpleanalytics.com/pruwitter.muurilo.xyz?utm_source=pruwitter.muurilo.xyz&utm_content=badge"
+          referrerPolicy="origin"
+          className="m-5"
+          target="_blank"
+        >
+          <img
+            src="https://simpleanalyticsbadge.com/pruwitter.muurilo.xyz?&counter=false"
+            loading="lazy"
+            referrerPolicy="no-referrer"
+            crossOrigin="anonymous"
+          />
+        </a>
         <div className="flex flex-row">
           <p className="text-gray-800">
             &copy; Copyright &nbsp;
